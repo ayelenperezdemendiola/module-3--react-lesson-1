@@ -1,0 +1,51 @@
+.page__introduction {
+  text-align: left;
+  padding: 30px;
+}
+.small-text{
+  font-family: $font-text;
+  color: $color-small-text;
+  font-size: 14px;
+  font-weight: 400;
+}
+.introduction__tittle {
+  font-family: $font-tittle;
+  font-size: 26px;
+  font-weight: 700;
+  color: $black;
+  line-height: 45px;
+}
+.introduction__text{
+  font-family: $font-text;
+  font-size: 20px;
+  font-weight: 400;
+  color: $color-text-introduction;
+  line-height: 30px;
+}
+.introduction__link{
+  color: $orange;
+  font-family: $font-text;
+  font-size: 20px;
+  text-decoration: none;
+
+  & .introduction__link-container{
+  height: 45px;
+  width: 76px;
+  border-radius: 22px;
+  border: 2px solid $orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 45px;
+  @media all and(min-width:768px){
+    width: 91px;
+    margin: 30px 0 60px;
+  }
+}
+  &:hover{
+    text-decoration: none;
+  }
+  &:visited{
+    text-decoration: none;
+  }
+}

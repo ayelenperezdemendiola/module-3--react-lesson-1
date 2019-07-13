@@ -1,0 +1,72 @@
+.page__reasons{
+  text-align: center;
+  color: $black;
+  background-color: $background-reasons;
+  line-height: 30px;
+  padding-top: 45px;
+}
+.reasons__tittle{
+  font-family:$font-tittle;
+  font-size: 24px;
+  margin-bottom: 45px;
+  @media all and (min-width: 768px){
+    font-size: 26px;
+  }
+}
+.reasons__list{
+  list-style: none;
+  & .reason2 {
+    margin: 45px 0;
+  }
+}
+.reason__tittle{
+  font-family:$font-tittle;
+  font-size: 18px;
+  font-weight: bold;
+  @media all and (min-width: 768px){
+    font-size: 24px;
+  }
+}
+.reason__text {
+  font-family: $font-text;
+  font-size: 18px;
+  font-weight: 400px;
+  @media all and (min-width: 768px){
+    font-size: 24px;
+  }
+}
+.reasons__button{
+  text-decoration: none;
+  background-color: $orange;
+  color: white;
+  font-family: $font-text;
+  font-size: 20px;
+  border-radius: 22px;
+  height: 45px;
+  width: 184px;
+  box-shadow: none;
+  border-width: none;
+  border-style: none;
+  border-color: none;
+  margin: 45px 0 60px;
+
+  &:hover{
+    text-decoration: none;
+    border: none;
+    box-shadow: none;
+    border-width: none;
+    border-style: none;
+    border-color: none;
+  }
+  &:visited{
+    text-decoration: none;
+    border: none;
+    box-shadow: none;
+    border-width: none;
+    border-style: none;
+    border-color: none;
+  }
+  @media all and(min-width: 768px){
+    width: 210px;
+  }
+}

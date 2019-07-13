@@ -1,0 +1,48 @@
+.hero{
+  min-height: 100vh;
+  background: url('../images/cover.jpg') center center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+.hero__text{
+  color: $white;
+  transform: translateY(-50%);
+  width: 290px;
+  @media all and(min-width: 768px){
+    width: 690px;
+  }
+  & .hero__tittle {
+    font-family: $font-tittle;
+    font-size: 42px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 55px;
+    @media all and (min-width: 768px){
+      font-size: 80px;
+      width: 690px;
+      line-height: 106px;
+    }
+  }
+  & .hero__description{
+    font-family: $font-text;
+    font-size: 16px;
+    font-weight: 400px;
+    @media all and (min-width: 768px){
+      font-size: 24px;
+    }
+  }
+}
+.hero__link{
+  background-color:$white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 53px;
+}
