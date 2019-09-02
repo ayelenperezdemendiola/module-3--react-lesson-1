@@ -11,4 +11,18 @@ const users = [
   ];
 
   users.sort ((a, b) => a.pin - b.pin);
+
+  function compare( a, b ) {
+    if ( a.name < b.name ){
+      return -1;
+    }
+    if ( a.name> b.name){
+      return 1;
+    }
+    return 0;
+  }
+  // users.sort ((a, b)=> b.name -a.name); ¿Por qué esto no funciona y lo otro si?
+  
+  users.sort(compare);
+
   console.log (users);
