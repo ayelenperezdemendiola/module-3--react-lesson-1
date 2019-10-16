@@ -1,13 +1,13 @@
 'use strict';
+
 const userCard = document.querySelector('.user--card');
 const userReposContainer = document.querySelector('.user--repos');
 const filter = document.querySelector('.filter--field');
 const searchButton = document.querySelector('.filter--button');
 const API = "https://api.github.com/users/";
 const fullNameElement = document.createElement('h1');
-const logoContainer = document.querySelector ('.logo');
-const userContainer = document.querySelector ('.user--container')
-
+const logoContainer = document.querySelector('.logo');
+const userContainer = document.querySelector('.user--container');
 
 function createNewElement(myElement, myClass, myContent) {
     const newElement = document.createElement(myElement);
@@ -30,16 +30,13 @@ function createNewReposElement(myElement, myClass, myContent) {
 
 function getUserData() {
     const currentUser = filter.value;
-    console.log(currentUser);
     const ENDPOINT = API + currentUser;
     fetch(ENDPOINT)
         .then(response => response.json())
         .then(data => {
             userCard.innerHTML = '';
             logoContainer.innerHTML = '';
-            userReposContainer.innerHTML= '';
-
-            console.log(data)
+            userReposContainer.innerHTML = '';
             if (data.message === 'Not Found') {
                 userCard.innerHTML = '';
                 userCard.innerHTML = `<div class="add--container"><p class="add--notFound">Does not exist</p></div>`;
@@ -59,7 +56,7 @@ function getUserData() {
         })
         .then(reposResponse => reposResponse.json())
         .then(reposData => {
-            userReposContainer.innerHTML= '';
+            userReposContainer.innerHTML = '';
             createNewReposElement('h3', 'repos--title', 'Repositories');
             if (reposData.length === 0) {
                 createNewElement('p', 'add--notFound', 'No repositories found')
@@ -77,14 +74,10 @@ function getUserData() {
                                     <i class="fas fa-code-branch"></i>
                                     ${reposData[i].forks_count}
                             </li>
-                            </ul>
-                            
+                            </ul>            
                 </li>`;
                 }
             }
-
-
-            console.log(reposData);
         });
 }
 

@@ -112,6 +112,7 @@
 
 .repos__list--item .repos__list--link {
   text-decoration: none;
+  color: black;
 }
 
 .list--puntuation .item--puntuation {
