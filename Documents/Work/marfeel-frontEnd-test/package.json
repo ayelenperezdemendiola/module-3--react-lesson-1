@@ -31,5 +31,8 @@
 	},
 	"author": "Adalab",
 	"license": "MIT",
-	"homepage": "https://github.com/Adalab/Adalab-web-starter-kit"
+	"homepage": "https://github.com/Adalab/Adalab-web-starter-kit",
+	"devDependencies": {
+		"eslint-config-google": "^0.14.0"
+	}
 }
