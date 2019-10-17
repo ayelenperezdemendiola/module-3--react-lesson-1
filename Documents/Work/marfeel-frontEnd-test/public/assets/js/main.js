@@ -4,7 +4,6 @@ const userCard = document.querySelector('.user--card');
 const userReposContainer = document.querySelector('.user--repos');
 const filter = document.querySelector('.filter--field');
 const searchButton = document.querySelector('.filter--button');
-const fullNameElement = document.createElement('h1');
 const logoContainer = document.querySelector('.logo');
 const userContainer = document.querySelector('.user--container');
 
@@ -47,15 +46,15 @@ function createReposElements(reposData) {
         reposList.innerHTML +=
             `<li class="repos__list--item"> 
                 <a class ="repos__list--link" href=${reposData[i].html_url}>Repo ${i}</a>
-                <ul class="list--puntuation">
-                <li class="item--puntuation">
-                        <i class="fas fa-star"></i>
-                        ${reposData[i].stargazers_count}
-                        <i class="fas fa-code-branch"></i>
-                        ${reposData[i].forks_count}
-                </li>
-                </ul>            
-    </li>`;
+                    <ul class="list--puntuation">
+                        <li class="item--puntuation">
+                            <i class="fas fa-star"></i>
+                            ${reposData[i].stargazers_count}
+                            <i class="fas fa-code-branch"></i>
+                             ${reposData[i].forks_count}
+                            </li>
+                        </ul>            
+             </li>`;
     }
 }
 
