@@ -1,0 +1,15 @@
+.menu__button{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  background-color: $background-menu;
+  width: 44px;
+  height: 44px;
+  border: none;
+  &:hover{
+    text-decoration: none;
+  }
+  &:visited{
+    text-decoration: none;
+  }
+}
